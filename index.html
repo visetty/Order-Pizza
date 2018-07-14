@@ -68,14 +68,14 @@
           </div>
           <!--div for submitting order-->
           <div class"submitorder">
-            <button type="submit" class="btn">Submit Order</button>
+            <button type="submit" class="btn">Review Order</button>
           </div>
         </form>
       </div>
     </div>
     <!--div class for customer address-->
 
-    <div class="customeraddress" "row">
+    <div class= "row" "customeraddress">
       <div class="col-md-6">
         <form class="form-group">
           <h2>Enter Your Details</h2>
@@ -89,12 +89,25 @@
           <input type="text" class="form-control" id="state"></br>
           <label for="zipcode">Zipcode</label></br>
           <input type="text" class="form-control" id="zipcode"></br>
+          <div class="submitaddress">
+            <button type="submit" class="btn">Submit</button>
+          </div>
         </form>
-        <div class="submitaddress">
-          <button type="submit" class="btn">Submit</button>
+      </div>
+    </div><!--end of address div row-->
+    <div class="row" id="ordersummary">
+      <div class="col-md-6">
+        <div class="yourpizzaOrderdetails">
+          <h2>Order Summary</h2>
+          <h3>Size:<span class="sizeoforder"></span></h3>
+          <h3>Toppings:<span class="yourtoppings"></span></h3>
+          <h3>Total:<span class="totalcost"></span></h3>
+          <h3>Delivery Type:<span class="yourdeliverytype"></span></h3>
+          <button type="submit" class="btn">Order</button>
         </div>
       </div>
     </div>
+
 
 
   </div><!--end of container div-->
