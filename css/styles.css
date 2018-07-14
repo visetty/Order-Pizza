@@ -5,3 +5,11 @@
 #ordersummary {
   display: none;
 }
+
+#customer-delivery {
+  display: none;
+}
+
+#customer-pickup {
+  display: none;
+}
