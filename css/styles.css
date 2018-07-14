@@ -1,3 +1,7 @@
 #customeraddress {
   display: none;
 }
+
+#ordersummary {
+  display: none;
+}
