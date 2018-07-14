@@ -41,18 +41,18 @@
             <h2>Select your Toppings</h2>
             <!--input checkboxex for topping selection-->
             <label for="toppingselection">Topping Types</label></br>
-            <input type="checkbox" name="toppings" value="Onions"> Onions<br>
-            <input type="checkbox" name="toppings" value="Tomato"> Tomatoes<br>
-            <input type="checkbox" name="toppings" value="Bell pepper"> Bell Pepper<br>
-            <input type="checkbox" name="toppings" value="Mushrooms"> Mushrooms<br>
-            <input type="checkbox" name="toppings" value="Spinach"> Spinach<br>
-            <input type="checkbox" name="toppings" value="Olives"> Olives<br>
-            <input type="checkbox" name="toppings" value="Pineapple"> Pineapple<br>
-            <input type="checkbox" name="toppings" value="Chicken"> Chicken<br>
-            <input type="checkbox" name="toppings" value="Bacon"> Bacon<br>
-            <input type="checkbox" name="toppings" value="Pepperoni"> Pepperoni<br>
-            <input type="checkbox" name="toppings" value="sausage"> Sausage<br>
-            <input type="checkbox" name="toppings" value="Ham"> Ham<br>
+            <input type="checkbox" name="toppings" value="1"> Onions<br>
+            <input type="checkbox" name="toppings" value="1"> Tomatoes<br>
+            <input type="checkbox" name="toppings" value="1"> Bell Pepper<br>
+            <input type="checkbox" name="toppings" value="1"> Mushrooms<br>
+            <input type="checkbox" name="toppings" value="1"> Spinach<br>
+            <input type="checkbox" name="toppings" value="1"> Olives<br>
+            <input type="checkbox" name="toppings" value="1"> Pineapple<br>
+            <input type="checkbox" name="toppings" value="1"> Chicken<br>
+            <input type="checkbox" name="toppings" value="1"> Bacon<br>
+            <input type="checkbox" name="toppings" value="1"> Pepperoni<br>
+            <input type="checkbox" name="toppings" value="1"> Sausage<br>
+            <input type="checkbox" name="toppings" value="1"> Ham<br>
           </div>
         </form><!--end of toppings pick div-->
       </div>
@@ -95,6 +95,7 @@
         </form>
       </div>
     </div><!--end of address div row-->
+    <!--Ordersummary div-->
     <div class="row" id="ordersummary">
       <div class="col-md-6">
         <div class="yourpizzaOrderdetails">
@@ -102,13 +103,18 @@
           <h3>Size:<span class="sizeoforder"></span></h3>
           <h3>Toppings:<span class="yourtoppings"></span></h3>
           <h3>Total:<span class="totalcost"></span></h3>
-          <h3>Delivery Type:<span class="yourdeliverytype"></span></h3>
-          <button type="submit" class="btn">Order</button>
+          <h3>Delivery Type:<span class="yourdeliverytype"></span></h3></br>
+          <button type="submit" class="btn">Confirm Order</button>
         </div>
       </div>
+    </div><!--end of ordersummary-->
+    <!--div for customer-delivery-->
+    <div class="customer-delivery">
+      <h3>Your Order is ready for delivery. you can enjoy it in 20 minutes</h3>
     </div>
-
-
-
+    <!--div for customer-pickup-->
+    <div class="customer-pickup">
+      <h3>Your Pizza is ready for pickup, come get it.</h3>
+    </div>
   </div><!--end of container div-->
 </body>
