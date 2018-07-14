@@ -15,21 +15,47 @@
   </div>
   <!--container for the order form-->
   <div class="container">
-    <div class="row" id="order">
+    <div class="row" id="sizeorder">
       <div class="col-md-6">
         <!--form to select pizza size-->
-        <form id="orderselection">
           <h2>Start Your Pizza Order</h2>
-          <label for="sizeofpizza">Pick a Size of Pizza</label>
-          <select class="form-control" id="pizzasize">
-            <option selected>Select a Size</option>
-            <option value="small">Small(10")</option>
-            <option value="medium">Medium(12")</option>
-            <option value="Large">Large(14")</option>
-            <option value="X-Large">X-Large(18")</option>
-          </select>
-        </form>
+          <form id="orderselection">
+          <div class="form-group">
+            <label for="sizeofpizza">Pick a Size of Pizza</label>
+              <select class="form-control" id="pizzasize">
+                <option selected>Select a Size</option>
+                <option value="small">Small(10")</option>
+                <option value="medium">Medium(12")</option>
+                <option value="Large">Large(14")</option>
+                <option value="X-Large">X-Large(18")</option>
+              </select>
+          </div>
+          </form>
+      </div>
+    </div>          <!--end of size selction div form-->
+          <!--div for selection of toppings-->
+    <div class="row" id="ordertopping">
+      <div class="col-md-6">
+        <form id="toppingspick">
+          <div class="form-group">
+            <h2>Select your Toppings</h2>
+            <!--input checkboxex for topping selection-->
+            <label for="toppingselection">Topping Types</label></br>
+            <input type="checkbox" name="toppings" value="Onions"> Onions<br>
+            <input type="checkbox" name="toppings" value="Tomato"> Tomatoes<br>
+            <input type="checkbox" name="toppings" value="Bell pepper"> Bell Pepper<br>
+            <input type="checkbox" name="toppings" value="Mushrooms"> Mushrooms<br>
+            <input type="checkbox" name="toppings" value="Spinach"> Spinach<br>
+            <input type="checkbox" name="toppings" value="Olives"> Olives<br>
+            <input type="checkbox" name="toppings" value="Pineapple"> Pineapple<br>
+            <input type="checkbox" name="toppings" value="Chicken"> Chicken<br>
+            <input type="checkbox" name="toppings" value="Bacon"> Bacon<br>
+            <input type="checkbox" name="toppings" value="Pepperoni"> Pepperoni<br>
+            <input type="checkbox" name="toppings" value="sausage"> Sausage<br>
+            <input type="checkbox" name="toppings" value="Ham"> Ham<br>
+          </div>
+        </form><!--end of toppings pick div-->
       </div>
     </div>
-  </div>
+  </div><!--end of container div-->
 </body>
