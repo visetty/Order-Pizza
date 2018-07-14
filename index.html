@@ -58,14 +58,34 @@
       </div>
     </div>
     <!--div for delivery/pick-up-->
-    <div class="delivery-type">
-      <h3>How do you want to get your Pizza</h3>
-      <input type="radio" name="delivery" value="Delivery">  Delivery</br>
-      <input type="radio" name="Pick Up" value="Pick-up">  Pick Up</br>
+    <div class="row" id="submitorder">
+      <div class="col-md-6">
+        <form class="form-group">
+          <div class="delivery-type">
+            <h3>How do you want to get your Pizza Today</h3>
+            <input type="radio" name="delivery" value="Delivery">  Delivery</br>
+            <input type="radio" name="Pick Up" value="Pick-up">  Pick Up</br>
+          </div>
+          <!--div for submitting order-->
+          <div class"submitorder">
+            <button type="submit" class="btn">Submit Order</button>
+          </div>
+        </form>
+      </div>
     </div>
-    <!--div for submitting order-->
-    <div class"submitorder">
-      <button type="submit" class="btn">Submit Order</button>
+    <!--div class for customer address-->
+    <div class="customeraddress" >
+      <form id="usersaddress" class="form-group">
+        <h2>Enter Your Details</h2>
+        <label for="Name">Name</label>
+        <input type="text" class="form-control" id="customername"></br>
+        <label for="street">Street</label>
+        <input type="text" class="form-control" id="street"></br>
+        <label for="city">City</label>
+        <input type="text" class="form-control" id="city"></br>
+        <label for="state">State</label>
+        <input type="text" class="form-control" id="state"></br>
+      </form>
     </div>
 
 
