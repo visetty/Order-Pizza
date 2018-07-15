@@ -20,9 +20,26 @@
   text-shadow: black 0.6em 0.6em 0.6em;
   background-position: 0% 25%;
   background-size: cover;
-  
 }
 
 .jumbotron {
   background-image: url(../images/pizza.jpg);
+}
+
+h2 {
+  font-weight: bolder;
+}
+
+#delivery-type h3 {
+  font-weight: bolder;
+}
+
+.btn {
+  background-color: tomato;
+  color: white;
+}
+
+
+body {
+  background-color: hsla(89, 43%, 51%, 0.3);
 }
