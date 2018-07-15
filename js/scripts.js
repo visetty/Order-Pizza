@@ -6,7 +6,7 @@ function pizzaOrder(size, toppings, delivery) {
   this.delivery = delivery;
 }
 
-
+//prototype to know pizza price
 pizzaOrder.prototype.total = function() {
   this.price=0;
   if (this.size === "small") {
