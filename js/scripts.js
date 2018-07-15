@@ -55,7 +55,7 @@ $(document).ready(function() {
       $("#ordersummary").show();
       $(".sizeoforder").html( sizeSelected);
       $(".yourtoppings").html( toppingSelected);
-      $(".totalcost").html(order.total());
+      $(".totalcost").html('$'+order.total());
       $(".yourdeliverytype").html(deliveryChoice);
       $("#ordersummary").show();
     }
@@ -76,7 +76,7 @@ $(document).ready(function() {
       $("#ordersummary").show();
       $(".sizeoforder").html( sizeSelected);
       $(".yourtoppings").html( toppingSelected);
-      $(".totalcost").html(order.total());
+      $(".totalcost").html('$'+order.total());
       $(".yourdeliverytype").html(deliveryChoice);
       $("#customeraddress").hide();
       $("form#orderselection").hide();
@@ -92,13 +92,6 @@ $(document).ready(function() {
         $("#customer-pickup").show();
       }
     });
-
-
-
-
-
-
-
 
   });
 });
