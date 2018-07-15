@@ -1,8 +1,8 @@
 //backend-logic
 
-var yourPizzaOrder = function pizzaOrder(size, toppings, delivery, price) {
-  this.size = pizzasize;
-  this.toppings = toppingspick;
+function pizzaOrder(size, toppings, delivery, price) {
+  this.size = size;
+  this.toppings = toppings;
   this.delivery = delivery;
   this.price = 0;
 }
@@ -22,3 +22,21 @@ pizzaOrder.prototype.price = function() {
 if (this.delivery === "delivery") {
   this.price += 2;
 }
+
+
+//user-interface-logic
+
+$(document).ready(function() {
+  $("form#orderselection").submit(function(event) {
+    event.preventDefault();
+    var sizeSelected = $("#pizzasize").val();
+    var toppingSelected = [];
+    $("input:checkbox[name=toppings]:checked").each(function() {
+      toppingSelected.push($(this).val());
+    });
+
+    var deliveryChoice = $("#delivery-type").val();
+
+    alert(toppingSelected);
+  });
+});
