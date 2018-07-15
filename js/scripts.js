@@ -66,7 +66,7 @@ $(document).ready(function() {
       $("form#orderselection").hide();
       $("#ordersummary").show();
       $(".sizeoforder").html( sizeSelected);
-      $(".yourtoppings").html( toppingSelected.toString());
+      $(".yourtoppings").html( toppingSelected.toString()); //method .toString added to toppingSelected to have them divided by comma
       $(".totalcost").html('$'+order.total());
       $(".yourdeliverytype").html(deliveryChoice);
       $("#ordersummary").show();
@@ -79,8 +79,8 @@ $(document).ready(function() {
       var city=$("input#city").val();
       var state=$("input#state").val();
       var zipcode=$("input#zipcode").val();
-      $(".name").html(name);
-      $(".street").html(street);
+      $(".name").text(name);
+      $(".street").text(street);
       $(".city").text(city);
       $(".state").text(state);
       $(".zipcode").text(zipcode);
@@ -94,7 +94,9 @@ $(document).ready(function() {
       $("form#orderselection").hide();
     });
 
-    $("#ordersummary").click(function(event) {
+
+    //confirmorder click leads to the following
+    $("#confirmorder").click(function(event) {
       event.preventDefault();
       $("#ordersummary").hide();
 
@@ -103,6 +105,15 @@ $(document).ready(function() {
       } else {
         $("#customer-pickup").show();
       }
+
+    //$("#changeorder").click(function(event) {
+    //  event.preventDefault();
+    //  $("#customer-delivery").hide();
+    //  $("#customer-pickup").hide();
+    //  $("#orderselection").show();
+    //});
+
+
     });
 
     //$("#ordersummary").reset();
