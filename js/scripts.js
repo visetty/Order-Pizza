@@ -6,6 +6,7 @@ function pizzaOrder(size, toppings, delivery) {
   this.delivery = delivery;
 }
 
+
 pizzaOrder.prototype.total = function() {
   this.price=0;
   if (this.size === "small") {
@@ -34,20 +35,22 @@ pizzaOrder.prototype.total = function() {
 $(document).ready(function() {
   $("form#orderselection").submit(function(event) {
     event.preventDefault();
-
+    //variable to get value of pizza selected
     var sizeSelected = $("#pizzasize").val();
+    //alert to select pizza size
     if (sizeSelected === "selected") {
       return alert("select valid size option");
     }
+    //array for selected toppings
     var toppingSelected = [];
     $("input:checkbox[name=toppings]:checked").each(function() {
       toppingSelected.push($(this).val());
     });
 
-
+    //variable to get delivery option input
     var deliveryChoice = $("input:radio[name=delivery]:checked").val();
     //alert if delivery options not selected
-    if (deliveryChoice !== "Delivery" || deliveryChoice !== "Pick-up") {
+    if (deliveryChoice !== "Delivery" && deliveryChoice !== "Pick-up") {
       return alert("select delivery option");
     }
 
@@ -55,7 +58,7 @@ $(document).ready(function() {
 
     var order = new pizzaOrder(sizeSelected, toppingSelected, deliveryChoice);
 
-
+    //if customer selected delivery ad delivery option
     if (deliveryChoice === "Delivery") {
       $("#customeraddress").show();
     } else {
@@ -63,12 +66,12 @@ $(document).ready(function() {
       $("form#orderselection").hide();
       $("#ordersummary").show();
       $(".sizeoforder").html( sizeSelected);
-      $(".yourtoppings").html( toppingSelected);
+      $(".yourtoppings").html( toppingSelected.toString());
       $(".totalcost").html('$'+order.total());
       $(".yourdeliverytype").html(deliveryChoice);
       $("#ordersummary").show();
     }
-
+    //customer addredd .submit function
     $("form#customeraddress").submit(function(event) {
       event.preventDefault();
       var name=$("input#customername").val();
@@ -76,8 +79,8 @@ $(document).ready(function() {
       var city=$("input#city").val();
       var state=$("input#state").val();
       var zipcode=$("input#zipcode").val();
-      $(".name").text(name);
-      $(".street").text(street);
+      $(".name").html(name);
+      $(".street").html(street);
       $(".city").text(city);
       $(".state").text(state);
       $(".zipcode").text(zipcode);
