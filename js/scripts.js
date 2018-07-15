@@ -25,6 +25,7 @@ if (this.delivery === "delivery") {
 
 
 //user-interface-logic
+//getting the values of ordersize, toppings, delivery type
 
 $(document).ready(function() {
   $("form#orderselection").submit(function(event) {
@@ -35,8 +36,8 @@ $(document).ready(function() {
       toppingSelected.push($(this).val());
     });
 
-    var deliveryChoice = $("#delivery-type").val();
+    var deliveryChoice = $("input:radio[name=delivery]:checked").val();
 
-    alert(toppingSelected);
+    //alert(deliveryChoice);
   });
 });
