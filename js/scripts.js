@@ -34,17 +34,22 @@ pizzaOrder.prototype.total = function() {
 $(document).ready(function() {
   $("form#orderselection").submit(function(event) {
     event.preventDefault();
+    var errorOccured = false;
     var sizeSelected = $("#pizzasize").val();
+    if (sizeSelected === "selected") {
+      alert("select valid size option");
+      $("#orderselection").show();
+    }
     var toppingSelected = [];
     $("input:checkbox[name=toppings]:checked").each(function() {
       toppingSelected.push($(this).val());
     });
 
+
     var deliveryChoice = $("input:radio[name=delivery]:checked").val();
+
+
     var order = new pizzaOrder(sizeSelected, toppingSelected, deliveryChoice);
-
-    order.total();
-
 
 
     if (deliveryChoice === "Delivery") {
