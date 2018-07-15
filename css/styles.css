@@ -16,4 +16,13 @@
 
 .jumbotron h1 {
   text-align: center;
+  color: white;
+  text-shadow: black 0.6em 0.6em 0.6em;
+  background-position: 0% 25%;
+  background-size: cover;
+  
+}
+
+.jumbotron {
+  background-image: url(../images/pizza.jpg);
 }
