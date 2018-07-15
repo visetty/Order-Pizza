@@ -93,5 +93,10 @@ $(document).ready(function() {
       }
     });
 
+    //$("#ordersummary").reset();
+    //$("#customeraddress").reset();
+    //$("#orderselection").reset();
+
+
   });
 });

@@ -13,3 +13,7 @@
 #customer-pickup {
   display: none;
 }
+
+.jumbotron h1 {
+  text-align: center;
+}
