@@ -34,11 +34,10 @@ pizzaOrder.prototype.total = function() {
 $(document).ready(function() {
   $("form#orderselection").submit(function(event) {
     event.preventDefault();
-    var errorOccured = false;
+
     var sizeSelected = $("#pizzasize").val();
     if (sizeSelected === "selected") {
-      alert("select valid size option");
-      $("#orderselection").show();
+      return alert("select valid size option");
     }
     var toppingSelected = [];
     $("input:checkbox[name=toppings]:checked").each(function() {
@@ -47,6 +46,11 @@ $(document).ready(function() {
 
 
     var deliveryChoice = $("input:radio[name=delivery]:checked").val();
+    //alert if delivery options not selected
+    if (deliveryChoice !== "Delivery" || deliveryChoice !== "Pick-up") {
+      return alert("select delivery option");
+    }
+
 
 
     var order = new pizzaOrder(sizeSelected, toppingSelected, deliveryChoice);
